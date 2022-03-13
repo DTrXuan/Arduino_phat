@@ -3,6 +3,7 @@
 #define bangtai_o   5
 #define bom_o       6
 
+// Định nghĩa giá trị thay thế cho trạng thái cảm biến.
 #define KHONG_DOI    0
 #define XUNG_LEN     1
 #define XUNG_XUONG   2

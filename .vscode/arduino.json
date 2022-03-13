@@ -1,5 +1,6 @@
 {
     "board": "arduino:avr:uno",
     "programmer": "arduino:avrisp",
-    "sketch": "phat_code_mau.ino"
+    "sketch": "phat_code_mau.ino",
+    "output": "./build"
 }
