@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.ino": "cpp",
+        "wiring_private.h": "c"
+    },
+    "C_Cpp.errorSquiggles": "Enabled"
+}
