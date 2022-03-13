@@ -31,7 +31,7 @@ void setup() {
 
 void loop() {
   
-  
+
   // phát hiện xung cạnh lên của cảm biến. tức là đang false -> true 
   if (cambien_st == false && (bool)digitalRead(cambien_i) == true)
   {
@@ -49,5 +49,4 @@ void loop() {
     delay(100); // chờ 100ms để đảm bảo nước trong vòi chảy hết mới chạy băng tải.
     analogWrite(bangtai_o,200); // cho băng tải chạy lại
   }
-  
 }
