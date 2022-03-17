@@ -3,7 +3,7 @@
 #define bangtai_o   5
 #define bom_o       6
 
-// Định nghĩa giá trị thay thế cho trạng thái cảm biến.
+// Định nghĩa giá trị thay thế cho trạng thái cảm bi
 #define KHONG_DOI    0
 #define XUNG_LEN     1
 #define XUNG_XUONG   2
@@ -37,29 +37,25 @@ void setup() {
   cambien_last = (bool)digitalRead(cambien_i);
 }
 
-void loop() {
-  
+void loop() {  
+  /* Đọc và xử lý tín hiệu cảm biến */
   cambien_cur = (bool)digitalRead(cambien_i);
 
-  /* Đọc và xử lý tín hiệu cảm biến */
-  if (cambien_cur == false & cambien_last == true)
-  {
+  if (cambien_cur == false & cambien_last == true){
       cambien_st = XUNG_LEN;
       cambien_last = cambien_cur;
   }
-  else if (cambien_cur == true & cambien_last == false)
-  {
+  else if (cambien_cur == true & cambien_last == false){
       cambien_st = XUNG_XUONG;
       cambien_last = cambien_cur;
   }
-  else
-  {
+  else{
       cambien_st = KHONG_DOI;
   }
 
+  /* Điều khiển băng tải và bơm */
   // phát hiện xung cạnh lên của cảm biến. giả sử cảm biến phát hiện vật trả về true, không trả về false.
-  if (cambien_st == XUNG_LEN)
-  {
+  if (cambien_st == XUNG_LEN){
       analogWrite(bangtai_o,0); // Dừng băng tải.
       analogWrite(bom_o,200); // bật đông cơ bơm. thay đổi số 200 để điều chỉnh tốc độ động cơ bơm
       delay(2000); // chờ 2000ms (2s).

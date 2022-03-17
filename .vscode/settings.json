@@ -3,5 +3,6 @@
         "*.ino": "cpp",
         "wiring_private.h": "c"
     },
-    "C_Cpp.errorSquiggles": "Enabled"
+    "C_Cpp.errorSquiggles": "Enabled",
+    "C_Cpp.dimInactiveRegions": false
 }
