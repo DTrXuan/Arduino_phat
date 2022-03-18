@@ -56,11 +56,11 @@ void loop() {
   /* Điều khiển băng tải và bơm */
   // phát hiện xung cạnh lên của cảm biến. giả sử cảm biến phát hiện vật trả về true, không trả về false.
   if (cambien_st == XUNG_LEN){
-	  analogWrite(bangtai_o,0);			// Dừng băng tải.
+	  analogWrite(bangtai_o,0);		// Dừng băng tải.
 	  analogWrite(bom_o,200);			// bật đông cơ bơm. thay đổi số 200 để điều chỉnh tốc độ động cơ bơm
-	  delay(2000);						// chờ 2000ms (2s).
+	  delay(2000);						    // chờ 2000ms (2s).
 	  analogWrite(bom_o,0);				// tắt động cơ bơm.
-	  delay(100);						// chờ 100ms để đảm bảo nước trong vòi chảy hết mới chạy băng tải.
-	  analogWrite(bangtai_o,200);		// cho băng tải chạy lại
+	  delay(100);						      // chờ 100ms để đảm bảo nước trong vòi chảy hết mới chạy băng tải.
+	  analogWrite(bangtai_o,200);	// cho băng tải chạy lại
   }
 }
